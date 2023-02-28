@@ -1,0 +1,28 @@
+CREATE DATABASE order_log;
+
+CREATE TABLE orders (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    product VARCHAR(30) NOT NULL,
+    quantity INT(6) NOT NULL,
+    price FLOAT(8,2) NOT NULL,
+    total_price FLOAT(8,2) NOT NULL,
+    username VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE product (
+    product_id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(100) NOT NULL,
+    price INT(10) NOT NULL
+);
+
+CREATE TABLE product_category (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    category_name VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE user (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    password VARCHAR(100) NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
