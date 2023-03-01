@@ -8,13 +8,6 @@ $price = $_POST['price'];
 $total_price = $_POST['total_price'];
 $username = $_POST['username'];
 
-
-///echo $product."<br>";
-//echo $quantity."<br>";
-//echo $price."<br>";
-//echo $total_price."<br>";
-//echo $username."<br>";
-
     //สร้างคำสั่ง SQL เพื่อบันทึกข้อมูล
     $sql = "INSERT INTO orders (product, quantity, price, total_price, username)
             VALUES ('$product', '$quantity', '$price', '$total_price', '$username')";

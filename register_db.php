@@ -31,7 +31,7 @@
         $query = mysqli_query($conn, $user_check_query);
         $result = mysqli_fetch_assoc($query);
 
-        if ($result) { // if user exists
+        if ($result) { 
             if ($result['username'] === $username) {
                 array_push($errors, "Username already exists");
             }

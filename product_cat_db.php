@@ -15,7 +15,7 @@
         $query = mysqli_query($conn, $product_check_query,);
         $result = mysqli_fetch_assoc($query);
 
-        if ($result) { // if user exists
+        if ($result) {
 
             if ($result['product_cat'] === $product_cat) {
                 array_push($errors, "Product category already exists");
